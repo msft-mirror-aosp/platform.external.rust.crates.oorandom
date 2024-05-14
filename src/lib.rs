@@ -22,6 +22,9 @@
 #![no_std]
 use core::ops::Range;
 
+#[cfg(android_dylib)]
+extern crate std;
+
 /// A PRNG producing a 32-bit output.
 ///
 /// The current implementation is `PCG-XSH-RR`.
